@@ -1,14 +1,18 @@
 import Link from "next/link";
 import { cars } from "../data/carsData";
 
-export default async function CarDetail({ params }) {
-  const { id } = await params;
-  const car = cars.find((c) => c.id === parseInt(id));
+export async function generateStaticParams() {
+  return cars.map(car => ({ id: car.id.toString() }));
+}
+
+export default function CarDetail({ params }) {
+  const { id } = params;
+  const car = cars.find(c => c.id === parseInt(id));
 
   if (!car)
     return (
       <p className="p-8 text-red-500 text-center text-2xl font-semibold">
-     The car is not here
+        The car is not here
       </p>
     );
 
@@ -23,14 +27,11 @@ export default async function CarDetail({ params }) {
 
           <p className="text-2xl mb-2">
             <span className="font-bold text-gray-300"> Price : </span>{" "}
-            <span className="text-green-400">
-              {car.price.toLocaleString()} $
-            </span>
+            <span className="text-green-400">{car.price.toLocaleString()} $</span>
           </p>
 
           <p className="text-xl mb-2">
-            <span className="font-bold text-gray-300"> Modal : </span>{" "}
-            {car.model}
+            <span className="font-bold text-gray-300"> Model : </span> {car.model}
           </p>
 
           <p className="text-gray-300 leading-relaxed text-lg">
@@ -39,48 +40,30 @@ export default async function CarDetail({ params }) {
             experience.
           </p>
 
-          {/* butttttttttton */}
+          {/* buttons */}
           <div className="flex gap-4 mt-4">
-            <Link href={"/Checkout"} >
-            <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
-              Buy Now
-            </button>
+            <Link href={"/Checkout"}>
+              <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
+                Buy Now
+              </button>
             </Link>
             <Link href={"/products"}>
-              <button className="bg-yellow-900  hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
-             Back to cars
+              <button className="bg-yellow-900 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
+                Back to cars
               </button>
             </Link>
           </div>
+
+          {/* social */}
           <div className="flex gap-4 items-center pt-5">
-            <span>
-              <a href="">
-                {" "}
-                <i className="fa-brands fa-facebook text-blue-400 text-3xl transition-all duration-300 hover:text-blue-500 hover:scale-110"></i>
-              </a>
-            </span>
-            <span>
-              <a href="">
-                {" "}
-                <i className="fa-brands fa-whatsapp text-green-500 text-3xl transition-all duration-300 hover:text-green-400 hover:scale-110"></i>
-              </a>
-            </span>
-            <span>
-              <a href="">
-                {" "}
-                <i className="fa-brands fa-instagram text-pink-600 text-3xl transition-all duration-300 hover:text-pink-400 hover:scale-110"></i>
-              </a>
-            </span>
-            <span>
-              <a href="">
-                {" "}
-                <i className="fa-brands fa-x-twitter text-gray-300 text-3xl transition-all duration-300 hover:text-gray-700 hover:scale-110"></i>
-              </a>
-            </span>
+            <a href="#"><i className="fa-brands fa-facebook text-blue-400 text-3xl transition-all duration-300 hover:text-blue-500 hover:scale-110"></i></a>
+            <a href="#"><i className="fa-brands fa-whatsapp text-green-500 text-3xl transition-all duration-300 hover:text-green-400 hover:scale-110"></i></a>
+            <a href="#"><i className="fa-brands fa-instagram text-pink-600 text-3xl transition-all duration-300 hover:text-pink-400 hover:scale-110"></i></a>
+            <a href="#"><i className="fa-brands fa-x-twitter text-gray-300 text-3xl transition-all duration-300 hover:text-gray-700 hover:scale-110"></i></a>
           </div>
         </div>
 
-        {/*  imaaaag */}
+        {/* image */}
         <div className="w-full md:w-2/3">
           <img
             src={car.img}
