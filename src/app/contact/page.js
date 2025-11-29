@@ -11,7 +11,7 @@
         <div className="container flex flex-col items-center justify-between w-full gap-10 p-6 bg-gray-900 rounded-md lg:flex-row">
           {/* --- INFO  --- */}
           <div className="flex flex-col justify-center w-full text-white info lg:w-1/2">
-            <h3 className="p-1 text-xl font-bold lg:text-4xl">
+            <h3 className="p-1 text-3xl font-bold lg:text-4xl">
               We are here to help !
             </h3>
 
