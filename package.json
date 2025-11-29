@@ -2,15 +2,13 @@
   "name": "my-appp",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint" , 
-    "export": "next export" ,
-"deploy": "npm run build && npm run export && git add out/* && git commit -m 'Deploy' && git subtree push --prefix out origin gh-pages"
-
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "eslint"
+}
+,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
     "lucide-react": "^0.555.0",
@@ -25,6 +23,7 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.4",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4"
   }
 }
