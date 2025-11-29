@@ -8,52 +8,52 @@
   className="min-h-[100vh] bg-gray-900 w-full flex justify-center items-center p-4 pt-[100px] md:pt-[120px]"
 >
      
-        <div className="w-full container bg-gray-900 flex flex-col lg:flex-row justify-between items-center rounded-md p-6 gap-10">
+        <div className="container flex flex-col items-center justify-between w-full gap-10 p-6 bg-gray-900 rounded-md lg:flex-row">
           {/* --- INFO  --- */}
-          <div className="info w-full lg:w-1/2 text-white flex flex-col justify-center">
-            <h3 className="text-3xl lg:text-4xl p-1 font-bold">
+          <div className="flex flex-col justify-center w-full text-white info lg:w-1/2">
+            <h3 className="p-1 font-bold lg:text-3xl">
               We are here to help !
             </h3>
 
-            <p className="text-lg lg:text-xl ps-2 leading-8">
+            <p className="text-lg leading-8 lg:text-xl ps-2">
               Our Help Center is designed to be simple, organized, and easy to
               navigate. Whether you.re searching for answers to common questions
               or looking to reach out directly, you.ll find everything you need
               clearly arranged. Just browse, click, and get the support you.re
               looking for without any hassle.
             </p>
-            <div className="flex gap-4 items-center pt-5">
+            <div className="flex items-center gap-4 pt-5">
               <span>
                 <a  href="https://www.facebook.com/share/1AyvqzgQZW/" target=' blank'>
                   {" "}
-                  <i className="fa-brands fa-facebook text-blue-400 text-3xl transition-all duration-300 hover:text-blue-500 hover:scale-110"></i>
+                  <i className="text-3xl text-blue-400 transition-all duration-300 fa-brands fa-facebook hover:text-blue-500 hover:scale-110"></i>
                 </a>
               </span>
               <span>
                 <a href="https://wa.me/201125218188" target='blank'>
                   {" "}
-                  <i className="fa-brands fa-whatsapp text-green-500 text-3xl transition-all duration-300 hover:text-green-400 hover:scale-110"></i>
+                  <i className="text-3xl text-green-500 transition-all duration-300 fa-brands fa-whatsapp hover:text-green-400 hover:scale-110"></i>
                 </a>
               </span>
               <span>
                 <a href="https://www.instagram.com/mohany111?igsh=MWQzYXZwaTQ1MG1jbA=="target=' blank'>
                   {" "}
-                  <i className="fa-brands fa-instagram text-pink-600 text-3xl transition-all duration-300 hover:text-pink-400 hover:scale-110"></i>
+                  <i className="text-3xl text-pink-600 transition-all duration-300 fa-brands fa-instagram hover:text-pink-400 hover:scale-110"></i>
                 </a>
               </span>
               <span>
                 <a href="https://www.linkedin.com/in/mohamed-mahany-47b415342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target=' blank'>
                   {" "}
                  
-                  <i className="fa-brands fa-linkedin text-blue-400 text-3xl transition-all duration-300 hover:text-blue-500 hover:scale-110"></i>
+                  <i className="text-3xl text-blue-400 transition-all duration-300 fa-brands fa-linkedin hover:text-blue-500 hover:scale-110"></i>
                 </a>
               </span>
             </div>
           </div>
 
           {/* --- FORM  --- */}
-          <div className="form w-full lg:w-1/2 p-5">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 text-white">
+          <div className="w-full p-5 form lg:w-1/2">
+            <div className="grid grid-cols-1 text-white gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
                 <label
                   htmlFor="first-name"
@@ -141,7 +141,7 @@
                         id="country"
                         name="country"
                         autoComplete="country"
-                        className="w-full appearance-none rounded-md bg-transparent py-2 pr-1 pl-5 text-base text-gray-300"
+                        className="w-full py-2 pl-5 pr-1 text-base text-gray-300 bg-transparent rounded-md appearance-none"
                       >
                         <option>EG</option>
                         <option>US</option>
@@ -154,7 +154,7 @@
                       type="text"
                       name="phone-number"
                       placeholder="123-456-7890"
-                      className="block w-full bg-transparent py-2 pr-3 pl-2 text-base text-white placeholder:text-gray-500 focus:outline-none"
+                      className="block w-full py-2 pl-2 pr-3 text-base text-white bg-transparent placeholder:text-gray-500 focus:outline-none"
                     />
                   </div>
                 </div>

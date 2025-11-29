@@ -7,33 +7,33 @@ export default async function CarDetail({ params }) {
 
   if (!car)
     return (
-      <p className="p-8 text-red-500 text-center text-2xl font-semibold">
+      <p className="p-8 text-2xl font-semibold text-center text-red-500">
      The car is not here
       </p>
     );
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-16 px-4 md:px-16 pt-50">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12">
+    <div className="min-h-screen px-4 py-16 text-white bg-gray-900 md:px-16 pt-50">
+      <div className="flex flex-col items-start gap-12 mx-auto max-w-7xl md:flex-row">
         {/* infooo  */}
-        <div className="w-full md:w-1/2 bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700 flex flex-col gap-6">
-          <h2 className="text-4xl font-extrabold mb-2 text-yellow-400">
+        <div className="flex flex-col w-full gap-6 p-8 bg-gray-800 border border-gray-700 shadow-2xl md:w-1/2 rounded-2xl">
+          <h2 className="mb-2 text-4xl font-extrabold text-yellow-400">
             {car.title}
           </h2>
 
-          <p className="text-2xl mb-2">
+          <p className="mb-2 text-2xl">
             <span className="font-bold text-gray-300"> Price : </span>{" "}
             <span className="text-green-400">
               {car.price.toLocaleString()} $
             </span>
           </p>
 
-          <p className="text-xl mb-2">
+          <p className="mb-2 text-xl">
             <span className="font-bold text-gray-300"> Modal : </span>{" "}
             {car.model}
           </p>
 
-          <p className="text-gray-300 leading-relaxed text-lg">
+          <p className="text-lg leading-relaxed text-gray-300">
             An excellent car that combines powerful performance with modern
             design. Suitable for everyday use and offers a distinctive driving
             experience.
@@ -42,39 +42,39 @@ export default async function CarDetail({ params }) {
           {/* butttttttttton */}
           <div className="flex gap-4 mt-4">
             <Link href={"/Checkout"} >
-            <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
+            <button className="px-6 py-2 font-bold text-white transition duration-300 bg-green-500 rounded-lg hover:bg-green-600">
               Buy Now
             </button>
             </Link>
             <Link href={"/products"}>
-              <button className="bg-yellow-900  hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">
+              <button className="px-6 py-2 font-bold text-white transition duration-300 bg-yellow-900 rounded-lg hover:bg-gray-700">
              Back to cars
               </button>
             </Link>
           </div>
-          <div className="flex gap-4 items-center pt-5">
+          <div className="flex items-center gap-4 pt-5">
             <span>
-              <a href="">
+              <a  href="https://www.facebook.com/share/1AyvqzgQZW/" target=' blank'>
                 {" "}
-                <i className="fa-brands fa-facebook text-blue-400 text-3xl transition-all duration-300 hover:text-blue-500 hover:scale-110"></i>
+                <i className="text-3xl text-blue-400 transition-all duration-300 fa-brands fa-facebook hover:text-blue-500 hover:scale-110"></i>
               </a>
             </span>
             <span>
-              <a href="">
+               <a href="https://wa.me/201125218188" target='blank'>
                 {" "}
-                <i className="fa-brands fa-whatsapp text-green-500 text-3xl transition-all duration-300 hover:text-green-400 hover:scale-110"></i>
+                <i className="text-3xl text-green-500 transition-all duration-300 fa-brands fa-whatsapp hover:text-green-400 hover:scale-110"></i>
               </a>
             </span>
             <span>
-              <a href="">
+              <a href="https://www.instagram.com/mohany111?igsh=MWQzYXZwaTQ1MG1jbA=="target=' blank'>
                 {" "}
-                <i className="fa-brands fa-instagram text-pink-600 text-3xl transition-all duration-300 hover:text-pink-400 hover:scale-110"></i>
+                <i className="text-3xl text-pink-600 transition-all duration-300 fa-brands fa-instagram hover:text-pink-400 hover:scale-110"></i>
               </a>
             </span>
             <span>
-              <a href="">
+              <a href="https://www.linkedin.com/in/mohamed-mahany-47b415342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target=' blank'>
                 {" "}
-                <i className="fa-brands fa-x-twitter text-gray-300 text-3xl transition-all duration-300 hover:text-gray-700 hover:scale-110"></i>
+               <i className="text-3xl text-blue-400 transition-all duration-300 fa-brands fa-linkedin hover:text-blue-500 hover:scale-110"></i>
               </a>
             </span>
           </div>
